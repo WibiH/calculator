@@ -2,4 +2,4 @@
 
 Simple calculator app react training.
 
-Superpowers: + − × ÷ ∓ % = clear
+Superpowers + − × ÷ ∓ % = clear

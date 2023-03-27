@@ -1,13 +1,20 @@
 import { useState } from "react";
 
-function DisplayNumber() {
+function DisplayNumber(props) {
   const [number, setNumber] = useState(0);
 
   const typeNumber = () => {
-    setNumber(number);
+    setNumber();
   };
 
-  return <input type="text" value={number} onClick={typeNumber} />;
+  return (
+    <input
+      className="display"
+      type="text"
+      value={number}
+      onClick={typeNumber}
+    />
+  );
 }
 
 export default DisplayNumber;

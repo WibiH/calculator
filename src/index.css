@@ -89,6 +89,7 @@ h1 {
 .equals {
   grid-column: 3/5;
   background-color: yellow;
+  border-color: #331ff3;
 }
 
 .operators {

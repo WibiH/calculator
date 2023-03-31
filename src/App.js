@@ -1,9 +1,9 @@
-import { useState } from "react";
 import "./App.css";
 import Wrapper from "./components/Wrapper";
 import Screen from "./components/Screen";
 import ButtonBox from "./components/ButtonBox";
 import Buttons from "./components/Buttons";
+import CalcProvider from "./context/CalcContext";
 
 const buttonValues = [
   ["C", "+-", "%", "/"],
@@ -26,15 +26,16 @@ function App() {
           ator
         </h1>{" "}
       </div>
-
-      <Wrapper>
-        <Screen />
-        <ButtonBox>
-          {buttonValues.flat().map((btn, i) => (
-            <Buttons value={btn} key={i} />
-          ))}
-        </ButtonBox>
-      </Wrapper>
+      <CalcProvider>
+        <Wrapper>
+          <Screen />
+          <ButtonBox>
+            {buttonValues.flat().map((btn, i) => (
+              <Buttons value={btn} key={i} />
+            ))}
+          </ButtonBox>
+        </Wrapper>
+      </CalcProvider>
     </div>
   );
 }

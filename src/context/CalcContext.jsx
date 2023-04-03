@@ -4,8 +4,8 @@ export const CalcContext = createContext();
 const CalcProvider = ({ children }) => {
   const [calc, setCalc] = useState({
     sign: "",
-    num: 0,
-    res: 0,
+    number: 0,
+    response: 0,
   });
 
   const providerValue = {

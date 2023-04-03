@@ -27,7 +27,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
 }
 
 .calculator {
@@ -80,6 +79,7 @@ h1 {
   justify-content: center;
   cursor: pointer;
   border-color: #331ff3;
+  font-size: 1.3rem;
 }
 
 .buttons:hover {

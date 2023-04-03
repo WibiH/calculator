@@ -18,15 +18,17 @@ const Buttons = ({ value }) => {
   const commaClick = () => {
     setCalc({
       ...calc,
-      num: !calc.num.toString().includes(".") ? calc.num + value : calc.num,
+      number: !calc.number.toString().includes(".")
+        ? calc.number + value
+        : calc.number,
     });
   };
 
   const resetClick = () => {
     setCalc({
       sign: "",
-      num: 0,
-      res: 0,
+      number: 0,
+      response: 0,
     });
   };
 
@@ -34,27 +36,27 @@ const Buttons = ({ value }) => {
     const numberString = value.toString();
 
     let numberValue;
-    if (numberString === "0" && calc.num === 0) {
+    if (numberString === "0" && calc.number === 0) {
       numberValue = "0";
     } else {
-      numberValue = Number(calc.num + numberString);
+      numberValue = Number(calc.number + numberString);
     }
     setCalc({
       ...calc,
-      num: numberValue,
+      number: numberValue,
     });
   };
 
   const signClick = () => {
     setCalc({
       sign: value,
-      res: !calc.res && calc.num ? calc.num : calc.ers,
-      num: 0,
+      response: !calc.response && calc.number ? calc.number : calc.response,
+      number: 0,
     });
   };
 
   const equalsClick = () => {
-    if (calc.res && calc.num) {
+    if (calc.response && calc.number) {
       const math = (a, b, sign) => {
         const result = {
           "+": (a, b) => a + b,
@@ -66,23 +68,24 @@ const Buttons = ({ value }) => {
       };
       setCalc({
         sign: "value",
-        res: math(calc.res, calc.num, calc.sign),
-        num: 0,
+        response: math(calc.response, calc.number, calc.sign),
+        number: 0,
       });
     }
   };
 
   const percentClick = () => {
     setCalc({
-      num: calc.num / 100,
-      res: calc.res / 100,
+      number: calc.number / 100,
+      response: calc.response / 100,
+      sign: "",
     });
   };
 
   const invertClick = () => {
     setCalc({
-      num: calc.num ? calc.num * -1 : 0,
-      res: calc.num ? calc.num * -1 : 0,
+      number: calc.number ? calc.number * -1 : 0,
+      response: calc.number ? calc.number * -1 : 0,
       sign: "",
     });
   };

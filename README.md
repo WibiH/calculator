@@ -5,4 +5,4 @@ Simple calculator app react training.
 
 Superpowers + − × ÷ ∓ % = clear
 
-Check it out! https://wibih.github.io/calculator/
+<a href="https://wibih.github.io/calculator/">Check it out!</a>

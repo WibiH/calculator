@@ -1,6 +1,7 @@
 # Calculator App
 
 ![calcoolator](/public/calcoolator.png)
+<br>
 Simple calculator app react training.
 
 Superpowers + − × ÷ ∓ % = clear
